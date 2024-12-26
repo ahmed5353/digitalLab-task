@@ -1,0 +1,99 @@
+@mixin background-effect($image, $size: cover, $height: 100vh) {
+  background-image: url($image);
+  background-size: $size;
+  height: $height;
+}
+
+.hero {
+  /* image 1307 */
+  background: url("/assets/images/hero.png");
+  background-size: cover;
+  height: 100vh;
+  mix-blend-mode: soft-light;
+}
+.building {
+  position: absolute;
+  min-width: 62.5rem;
+  min-height: 28rem;
+  inset: 20% 0 0 50%;
+  transform: translate(-50%);
+}
+.building-reverse {
+  position: absolute;
+  inset-inline-start: 50%;
+  transform: translateX(-55%);
+
+  // mix-blend-mode: multiply;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 10; // Ensure it's above the blended background
+}
+.hero-gradient {
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(197, 218, 213, 0.6) 0%, #d4cfd3 100%)
+    #8470d6;
+  // background: linear-gradient(180deg, rgb(197, 218, 213, 0.5) 0%, #d4cfd3 100%),
+  //   #8470d6;
+  // linear-gradient(to bottom, #37a9c0 100%, #37a9c0 0%);
+}
+
+// //////////////////////////////     INTRO     ///////////////////////////*/
+.intro {
+  background-image: url("/assets/images/background-main.png");
+  // height: 163vh;
+  // height: 60rem;
+  background-size: cover;
+  // padding: 1rem;
+
+  h1 {
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 6.25rem;
+    line-height: 0;
+  }
+}
+
+.cards {
+  // max-width: 875px;
+  margin-top: 7rem;
+}
+
+.card-freezone {
+  margin-bottom: -5rem;
+  max-width: 28.4rem;
+  max-height: 23.75rem;
+  background: rgba(0, 0, 0, 0.194);
+
+  border-radius: 1rem;
+  backdrop-filter: blur(20px);
+  img {
+    max-width: 30.75rem;
+    max-height: 22.8;
+    opacity: 0.7;
+    margin-left: -0.8rem;
+  }
+}
+
+.forest {
+  mix-blend-mode: hard-light;
+  opacity: 0.8;
+  // position: absolute;
+  background: url("/assets/images/forest.png");
+  height: 50vh;
+  background-size: cover;
+  // background-position: 50%;
+}
+
+.small-card {
+  width: 25rem;
+  min-height: 11rem;
+  border-radius: 1.02956rem;
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18.120075225830078px);
+}

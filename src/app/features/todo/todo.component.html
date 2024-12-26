@@ -1,0 +1,34 @@
+<div class="mx-auto w-50">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let todo of displayedTodos">
+      <input
+        class="form-check-input me-1"
+        type="checkbox"
+        [checked]="todo.completed"
+        id="checkbox-{{ todo.id }}"
+      />
+      <label class="form-check-label" for="checkbox-{{ todo.id }}">
+        {{ todo.todo }}
+      </label>
+    </li>
+  </ul>
+
+  <!-- Pagination Controls -->
+  <div class="d-flex justify-content-between align-items-center mt-3">
+    <button
+      class="btn btn-primary"
+      [disabled]="currentPage === 1"
+      (click)="goToPreviousPage()"
+    >
+      Previous
+    </button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button
+      class="btn btn-primary"
+      [disabled]="currentPage === totalPages"
+      (click)="goToNextPage()"
+    >
+      Next
+    </button>
+  </div>
+</div>

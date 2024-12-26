@@ -1,0 +1,22 @@
+@use "sass:color";
+
+@mixin get-started-btn(
+  $bg-color,
+  $padding-y: 0.5rem,
+  $padding-x: 1.5rem,
+  $font-size: 14px,
+  $hover-lightness: 10%
+) {
+  background-color: $bg-color;
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  color: #ffffff;
+  border: none;
+  border-radius: 50rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.adjust($bg-color, $lightness: $hover-lightness);
+  }
+}

@@ -1,0 +1,53 @@
+@use "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import "./variables.scss";
+@import "bootstrap/scss/bootstrap";
+
+// Apply Rubik as default font
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  // position: relative;
+}
+// Headings with Rubik
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $font-weight-medium;
+}
+
+// Utility classes for font weights
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-normal {
+  font-weight: $font-weight-normal;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+.fs-big {
+  font-size: 4.8rem;
+}
+
+.get-started-btn {
+  @include mixins.get-started-btn(#2a303b);
+}
+.secondary-get-started {
+  @include mixins.get-started-btn(#fff);
+}
